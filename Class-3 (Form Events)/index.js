@@ -7,6 +7,7 @@ const p = document.querySelector('p')
 let usernameRegex = /^[a-z0-9]{3,12}$/
 let feedbackRegex = /^.{20,50}$/
 
+
 form.addEventListener('submit' ,function(e){
     e.preventDefault()
     let userNameValidation = usernameRegex.test(form.username.value)
