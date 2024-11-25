@@ -24,11 +24,32 @@
     <div class="grandParent">
       <div class="parent">
         <div class="child"></div>
+         
       </div>
     </div>
+
+    
   </body>
 
   <script>
+
+    let child = document.querySelector('.child')
+
+    child.addEventListener('click' , function(e){
+      console.log('Child Clicked')
+      
+    })
+
+    let parent = document.querySelector('.parent')
+    parent.addEventListener('click' , function(e){
+      console.log('Parent Clicked')
+      e.stopPropagation()
+    })
+
+    let grandParent = document.querySelector('.grandParent')
+    grandParent.addEventListener('click' , function(){
+      console.log('Grand Parent Clicked')
+    })
 
     
 

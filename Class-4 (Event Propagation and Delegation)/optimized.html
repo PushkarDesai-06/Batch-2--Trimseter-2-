@@ -3,32 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <style>
-      div {
-        min-height: 100px;
-        min-width: 100px;
-        padding: 20px;
-        border: 2px solid black;
-      }
-
-      .test {
-        height: 100px;
-        width: 100px;
-        background-color: red;
-      }
-    </style>
+    <title>Event Propagation</title>
   </head>
 
+  <style>
+    div {
+      min-height: 100px;
+      min-width: 100px;
+      padding: 20px;
+      border: 2px solid black;
+    }
+
+    .test {
+      height: 100px;
+      width: 100px;
+      background-color: red;
+    }
+  </style>
   <body>
     <div class="grandParent">
       <div class="parent">
-        <div class="child"></div>
+        <div class="child">
+          <div class="child1">
+          
+          </div>
+        </div>
+         
       </div>
     </div>
-  </body>
-  <script>
+
     
+  </body>
+
+  <script>
+
+   const grandParent = document.querySelector('.grandParent')
+   grandParent.addEventListener('click' , function(e){
+       if(e.target.classList.contains('child')){
+        console.log('Child Clicked')
+       }
+
+       else if(e.target.classList.contains('parent')){
+        console.log('Parent Clicked')
+       }
+
+       else if(e.target.classList.contains('child1')){
+        console.log('Child 1 Clicked')
+       }
+
+       else{
+        console.log('Grand Parent Clicked')
+       }
+   })
+
+
+
+    
+
   </script>
 </html>
