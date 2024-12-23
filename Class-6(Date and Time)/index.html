@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+</head>
+<body>
+
+    <h1>Date and Time</h1>
+
+
+  <script>
+
+    // const now = new Date() // current date and time
+    // console.log(now)
+
+
+    // // create specific date and Time
+
+    // const specificDate = new Date("2024-12-25T13:40:32")
+    // console.log('Specific Date -> ' , specificDate)
+
+
+    // // custom date
+
+    // const customDate = new Date(2024 , 4 , 20 , 14 , 23 , 45)
+    // // (year , monthIndex , date )
+    // // month - 0 - Jan , 11 - Dec
+    // console.log(customDate)
+
+    //  const d = new Date() 
+    //  console.log(d)
+
+    //  // data extraction from date object
+
+    //  console.log(d.getFullYear())
+    //  console.log(d.getMonth())
+    //  console.log(d.getDay())
+    //  //  day index starts from 0 - sun , 6 - saturday
+    // //  console.log(d.getDate()) // 
+    //  console.log(d.getHours())
+    //  console.log(d.getMinutes())
+    //  console.log(d.getSeconds())
+    //  console.log(d.getMilliseconds())
+
+
+    //  let date1 = new Date("2024-11-01")
+    //  let date2 = new Date("2025-11-10")
+
+    //  const diffInMs =  date2 - date1
+    //  const diffInDays = diffInMs/(1000 *60*60*24)
+    //  console.log(diffInDays + ' DAYS')
+
+
+     // Time
+
+     // Calculate the Time left for Christmas from this moment
+
+     let christmasDate = new Date("2024-12-25")
+     let currentDate = new Date()
+
+
+     const timeLeftForChristmas = christmasDate-currentDate
+     const timeLeftinDays = Math.floor(timeLeftForChristmas/(1000 *60*60*24))
+
+     console.log(timeLeftinDays + " days left")
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  </script>  
+</body>
+</html>

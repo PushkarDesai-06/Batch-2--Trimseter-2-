@@ -5,18 +5,13 @@ const result = document.querySelector(".result");
 const form = document.querySelector(".quiz-form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  
 
-  const userAns = [
-    form.q1.value,
-    form.q2.value,
-    form.q3.value,
-    form.q4.value,
-    form.q5.value,
-  ];
   let score = 0;
-  userAns.forEach(function (answer, index) {
-    if (answer === correctAns[index]) {
-      score = score + 1;
+  correctAns.forEach((answer, index) => {
+    const userAnswer = form[`q${index + 1}`].value; // Access input value directly
+    if (userAnswer === answer) {
+      score += 1;
       questions[index].classList.add("correct");
     } else {
       questions[index].classList.add("wrong");
